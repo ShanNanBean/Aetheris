@@ -1,0 +1,15 @@
+.app-footer {
+  text-align: center;
+  padding: 12px 50px;
+  background: #f0f2f5;
+  border-top: 1px solid #e8e8e8;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-text {
+  color: rgba(0, 0, 0, 0.45);
+  font-size: 14px;
+}

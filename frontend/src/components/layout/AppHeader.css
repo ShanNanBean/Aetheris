@@ -1,0 +1,52 @@
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+  background: #001529;
+  height: 64px;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-icon {
+  font-size: 28px;
+  color: #1890ff;
+}
+
+.app-title {
+  margin: 0;
+  color: #fff;
+  font-weight: 600;
+}
+
+.header-trigger {
+  font-size: 18px;
+  color: #fff;
+  cursor: pointer;
+  padding: 0 12px;
+  transition: color 0.3s;
+}
+
+.header-trigger:hover {
+  color: #1890ff;
+}
+
+.header-right {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.header-text {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 14px;
+}

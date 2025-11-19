@@ -1,0 +1,55 @@
+.json-formatter-container {
+  height: 100%;
+}
+
+.formatter-content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.input-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+}
+
+.input-textarea,
+.result-textarea {
+  font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+  font-size: 13px;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.stats-section {
+  padding: 16px;
+  background: #fafafa;
+  border-radius: 8px;
+}
+
+.output-section {
+  margin-top: 16px;
+}
+
+.result-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.result-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

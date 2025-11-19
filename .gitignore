@@ -1,0 +1,26 @@
+# Python
+backend/__pycache__/
+backend/**/__pycache__/
+backend/*.py[cod]
+backend/venv/
+backend/.env
+
+# Node.js
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Qoder
+.qoder/quests/
