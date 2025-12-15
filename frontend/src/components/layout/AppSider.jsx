@@ -6,7 +6,9 @@ import {
   FileTextOutlined,
   CalculatorOutlined,
   ApiOutlined,
-  ToolOutlined
+  ToolOutlined,
+  QrcodeOutlined,
+  BarcodeOutlined
 } from '@ant-design/icons'
 import { getNavigation } from '../../services/api'
 import './AppSider.css'
@@ -19,7 +21,9 @@ const iconMap = {
   file: <FileTextOutlined />,
   calculator: <CalculatorOutlined />,
   api: <ApiOutlined />,
-  tool: <ToolOutlined />
+  tool: <ToolOutlined />,
+  qrcode: <QrcodeOutlined />,
+  barcode: <BarcodeOutlined />
 }
 
 function AppSider({ collapsed }) {
@@ -68,7 +72,7 @@ function AppSider({ collapsed }) {
       {
         key: 'ai_helper',
         icon: <MessageOutlined />,
-        label: 'AI助手',
+        label: 'AIGC',
         children: [
           {
             key: '/',

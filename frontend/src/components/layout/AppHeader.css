@@ -43,10 +43,35 @@
 }
 
 .header-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
   color: rgba(255, 255, 255, 0.85);
 }
 
 .header-text {
   color: rgba(255, 255, 255, 0.85);
   font-size: 14px;
+}
+
+.header-actions {
+  margin-left: 16px;
+}
+
+.header-action-btn {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 18px;
+}
+
+.header-action-btn:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1) !important;
+}
+
+.theme-switch {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.theme-switch.ant-switch-checked {
+  background: #1677ff;
 }

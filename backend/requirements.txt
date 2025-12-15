@@ -5,11 +5,20 @@ fastapi==0.109.0
 uvicorn[standard]==0.27.0
 
 # Data Validation
-pydantic==2.5.3
-pydantic-settings==2.1.0
+pydantic>=2.10.0
+pydantic-settings>=2.6.0
 
 # HTTP Client
 httpx==0.26.0
+
+# Image Processing
+Pillow>=10.0.0
+
+# QR Code Generation
+qrcode>=7.4.0
+
+# Barcode Generation
+python-barcode>=0.15.0
 
 # AI/ML (可选，后续集成)
 # langchain==0.1.0
@@ -18,3 +27,4 @@ httpx==0.26.0
 
 # Development
 python-dotenv==1.0.0
+python-multipart>=0.0.6

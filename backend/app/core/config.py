@@ -35,7 +35,8 @@ class Settings(BaseSettings):
     
     # AI配置
     OPENAI_API_KEY: str = os.getenv("OPENAI_API_KEY", "")
-    OPENAI_MODEL: str = "gpt-3.5-turbo"
+    OPENAI_API_BASE: str = os.getenv("OPENAI_API_BASE", "https://api.openai.com")
+    OPENAI_MODEL: str = os.getenv("OPENAI_MODEL", "gpt-3.5-turbo")
     AI_TEMPERATURE: float = 0.7
     AI_MAX_TOKENS: int = 2000
     

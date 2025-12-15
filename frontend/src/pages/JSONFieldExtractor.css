@@ -1,0 +1,99 @@
+.json-field-extractor-container {
+  height: 100%;
+}
+
+.extractor-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.input-section,
+.fields-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.input-textarea,
+.fields-textarea,
+.output-textarea {
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  font-size: 13px;
+}
+
+.format-section {
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.separator-section {
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.action-buttons {
+  margin-top: 16px;
+}
+
+.error-alert {
+  margin-top: 16px;
+}
+
+.stats-section {
+  margin-top: 16px;
+  padding: 16px;
+  background: #fafafa;
+  border-radius: 8px;
+}
+
+.fields-status {
+  display: flex;
+  flex-direction: column;
+}
+
+.results-section {
+  margin-top: 16px;
+}
+
+.results-section .section-header {
+  margin-bottom: 12px;
+}
+
+.output-section {
+  margin-top: 16px;
+}
+
+.output-section .section-header {
+  margin-bottom: 8px;
+  padding: 8px 12px;
+  background: #f5f5f5;
+  border-radius: 4px;
+}
+
+.output-textarea {
+  background: #fafafa;
+}
+
+/* 暗色主题适配 */
+.ant-app-dark .stats-section {
+  background: #1f1f1f;
+}
+
+.ant-app-dark .output-section .section-header {
+  background: #1f1f1f;
+}
+
+.ant-app-dark .output-textarea {
+  background: #141414;
+}

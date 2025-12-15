@@ -52,7 +52,7 @@ class ToolRegistry:
     
     def _initialize_default_tools(self):
         """初始化默认工具"""
-        from app.tools import json_formatter, unit_converter, base_converter
+        from app.tools import json_formatter, json_field_extractor, code_generator
         
         # 注册默认工具
         self.register_tool(
@@ -80,30 +80,30 @@ class ToolRegistry:
             executor=json_formatter.format_json
         )
         
-        # 注册单位转换工具
+        # 注册JSON字段提取工具
         self.register_tool(
             metadata=ToolMetadata(
-                tool_id="unit_converter",
-                name="单位转换",
-                description="长度、重量、温度等单位转换",
-                category="数据处理",
-                icon="calculator",
-                keywords=["单位", "转换", "长度", "重量", "温度"]
+                tool_id="json_field_extractor",
+                name="JSON字段提取",
+                description="提取JSON中的指定字段，支持嵌套路径和数组索引",
+                category="文本处理",
+                icon="file",
+                keywords=["JSON", "字段", "提取", "嵌套", "CSV", "导出"]
             ),
-            executor=unit_converter.convert_unit
+            executor=json_field_extractor.extract_json_fields
         )
         
-        # 注册进制转换工具
+        # 注册条形码/二维码生成工具
         self.register_tool(
             metadata=ToolMetadata(
-                tool_id="base_converter",
-                name="进制转换",
-                description="2/8/10/16进制相互转换",
+                tool_id="code_generator",
+                name="条码生成器",
+                description="生成条形码、二维码，支持合成到模板图片",
                 category="数据处理",
-                icon="calculator",
-                keywords=["进制", "转换", "二进制", "十六进制"]
+                icon="qrcode",
+                keywords=["条形码", "二维码", "QRCode", "Code128", "图片"]
             ),
-            executor=base_converter.convert_base
+            executor=code_generator.generate_code
         )
         
         logger.info("默认工具已注册")

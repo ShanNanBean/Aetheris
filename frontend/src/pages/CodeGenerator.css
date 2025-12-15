@@ -1,0 +1,124 @@
+.code-generator-container {
+  padding: 24px;
+  min-height: 100%;
+}
+
+.code-generator-container .ant-card {
+  border-radius: 8px;
+}
+
+.config-section {
+  padding-right: 16px;
+}
+
+.preview-section {
+  padding-left: 16px;
+  border-left: 1px solid #f0f0f0;
+  min-height: 600px;
+}
+
+.batch-items {
+  margin-bottom: 16px;
+}
+
+.batch-list {
+  margin-top: 8px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.batch-item {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.template-preview {
+  margin-top: 12px;
+  padding: 12px;
+  background: #fafafa;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.preview-container {
+  text-align: center;
+}
+
+.result-info {
+  margin-top: 16px;
+  padding: 16px;
+  background: #fafafa;
+  border-radius: 8px;
+  text-align: left;
+}
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 300px;
+}
+
+.empty-preview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  gap: 16px;
+}
+
+.batch-results {
+  max-height: 600px;
+  overflow-y: auto;
+}
+
+.batch-results .ant-table {
+  margin-top: 16px;
+}
+
+/* 折叠面板样式 */
+.code-generator-container .ant-collapse-ghost > .ant-collapse-item > .ant-collapse-header {
+  padding: 8px 0;
+  color: #1890ff;
+}
+
+/* 表单项间距调整 */
+.code-generator-container .ant-form-item {
+  margin-bottom: 16px;
+}
+
+/* 颜色选择器样式 */
+.code-generator-container input[type="color"] {
+  height: 32px;
+  width: 100%;
+  padding: 4px;
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.code-generator-container input[type="color"]:hover {
+  border-color: #40a9ff;
+}
+
+/* 响应式设计 */
+@media (max-width: 1200px) {
+  .code-generator-container .ant-col-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  
+  .preview-section {
+    border-left: none;
+    border-top: 1px solid #f0f0f0;
+    padding-left: 0;
+    padding-top: 16px;
+    margin-top: 16px;
+  }
+  
+  .config-section {
+    padding-right: 0;
+  }
+}
