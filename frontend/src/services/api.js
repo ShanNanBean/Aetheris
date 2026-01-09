@@ -97,3 +97,8 @@ export const generateCodeWithTemplate = async (formData) => {
   })
   return response.json()
 }
+
+// JMeter脚本生成器 API
+export const getJMeterPlugins = () => request.get('/tools/jmeter_generator/plugins')
+export const parseJMeterInput = (params) => request.post('/tools/jmeter_generator/parse', params)
+export const generateJMeterScript = (params) => request.post('/tools/jmeter_generator/generate', params)

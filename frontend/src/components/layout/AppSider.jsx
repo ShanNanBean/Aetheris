@@ -8,7 +8,8 @@ import {
   ApiOutlined,
   ToolOutlined,
   QrcodeOutlined,
-  BarcodeOutlined
+  BarcodeOutlined,
+  ThunderboltOutlined
 } from '@ant-design/icons'
 import { getNavigation } from '../../services/api'
 import './AppSider.css'
@@ -23,7 +24,8 @@ const iconMap = {
   api: <ApiOutlined />,
   tool: <ToolOutlined />,
   qrcode: <QrcodeOutlined />,
-  barcode: <BarcodeOutlined />
+  barcode: <BarcodeOutlined />,
+  thunderbolt: <ThunderboltOutlined />
 }
 
 function AppSider({ collapsed }) {

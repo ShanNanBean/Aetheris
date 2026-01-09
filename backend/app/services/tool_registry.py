@@ -52,7 +52,7 @@ class ToolRegistry:
     
     def _initialize_default_tools(self):
         """初始化默认工具"""
-        from app.tools import json_formatter, json_field_extractor, code_generator
+        from app.tools import json_formatter, json_field_extractor, code_generator, jmeter_generator
         
         # 注册默认工具
         self.register_tool(
@@ -104,6 +104,19 @@ class ToolRegistry:
                 keywords=["条形码", "二维码", "QRCode", "Code128", "图片"]
             ),
             executor=code_generator.generate_code
+        )
+        
+        # 注册JMeter脚本生成工具
+        self.register_tool(
+            metadata=ToolMetadata(
+                tool_id="jmeter_generator",
+                name="JMeter脚本生成器",
+                description="生成JMeter性能测试脚本，支持curl/swagger/json导入",
+                category="AI助手",
+                icon="api",
+                keywords=["JMeter", "性能测试", "压测", "JMX", "接口测试"]
+            ),
+            executor=jmeter_generator.generate_jmeter_script
         )
         
         logger.info("默认工具已注册")

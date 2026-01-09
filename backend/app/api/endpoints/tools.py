@@ -6,7 +6,7 @@ from pydantic import BaseModel
 from typing import Any, Optional, List
 from app.core.response import success_response, error_response
 from app.services.tool_registry import tool_registry
-from app.tools import code_generator
+from app.tools import code_generator, jmeter_generator
 import base64
 
 router = APIRouter()
@@ -119,6 +119,66 @@ async def generate_codes_batch(request: BatchCodeGenerateRequest):
         return success_response(data=result)
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"批量生成失败: {str(e)}")
+
+
+# ============ JMeter脚本生成器专用接口 ============
+
+class JMeterGenerateRequest(BaseModel):
+    """JMeter脚本生成请求"""
+    test_plan_name: str = "Test Plan"
+    thread_group: dict = {}
+    curl_commands: List[str] = []
+    swagger: Optional[dict] = None
+    apis: List[dict] = []
+    http_defaults: Optional[dict] = None
+    csv_data_config: Optional[dict] = None
+    user_variables: dict = {}
+    timers: List[dict] = []
+    assertions: List[dict] = []
+    post_processors: List[dict] = []
+    listeners: List[str] = ["view_results_tree", "summary_report"]
+    third_party_plugins: List[str] = []
+
+
+class JMeterParseRequest(BaseModel):
+    """JMeter输入解析请求"""
+    type: str = "curl"  # curl, swagger, json
+    content: str = ""
+
+
+@router.get("/jmeter_generator/plugins")
+async def get_jmeter_plugins():
+    """获取JMeter第三方插件信息"""
+    plugins = jmeter_generator.get_plugin_info()
+    return success_response(data=plugins)
+
+
+@router.post("/jmeter_generator/parse")
+async def parse_jmeter_input(request: JMeterParseRequest):
+    """解析输入内容（curl/swagger/json）"""
+    try:
+        params = request.model_dump()
+        result = await jmeter_generator.parse_input(params)
+        if result.get("success"):
+            return success_response(data=result)
+        else:
+            raise HTTPException(status_code=400, detail=result.get("error", "解析失败"))
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"解析失败: {str(e)}")
+
+
+@router.post("/jmeter_generator/generate")
+async def generate_jmeter_script(request: JMeterGenerateRequest):
+    """生成JMeter脚本"""
+    try:
+        params = request.model_dump()
+        result = await jmeter_generator.generate_jmeter_script(params)
+        if result.get("success"):
+            return success_response(data=result)
+        else:
+            raise HTTPException(status_code=400, detail=result.get("error", "生成失败"))
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"生成失败: {str(e)}")
 
 
 @router.post("/code_generator/generate_with_template")

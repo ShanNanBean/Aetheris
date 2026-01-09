@@ -1,0 +1,194 @@
+.jmeter-generator-container {
+  padding: 0;
+}
+
+.jmeter-generator-container .ant-card {
+  margin: 0;
+  height: 100%;
+}
+
+.jmeter-generator-container .ant-card-body {
+  padding: 16px 24px;
+}
+
+.input-section {
+  padding-right: 12px;
+}
+
+.preview-section {
+  padding-left: 12px;
+  border-left: 1px solid #f0f0f0;
+}
+
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  background: #fafafa;
+  border-radius: 8px;
+}
+
+.preview-container {
+  padding: 16px;
+  background: #f5f5f5;
+  border-radius: 8px;
+}
+
+.jmx-preview {
+  max-height: 400px;
+  overflow: auto;
+  background: #1e1e1e;
+  border-radius: 4px;
+  padding: 16px;
+}
+
+.jmx-preview pre {
+  margin: 0;
+  color: #d4d4d4;
+  font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+  font-size: 12px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.empty-preview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 20px;
+  background: #fafafa;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.config-item {
+  margin-bottom: 8px;
+  padding: 8px;
+  background: #f9f9f9;
+  border-radius: 4px;
+}
+
+/* Tabs样式 */
+.jmeter-generator-container .ant-tabs-card > .ant-tabs-nav .ant-tabs-tab {
+  background: #f0f0f0;
+  border-color: #d9d9d9;
+}
+
+.jmeter-generator-container .ant-tabs-card > .ant-tabs-nav .ant-tabs-tab-active {
+  background: #fff;
+  border-bottom-color: #fff;
+}
+
+/* Table样式 */
+.jmeter-generator-container .ant-table-small .ant-table-thead > tr > th {
+  background: #f5f5f5;
+}
+
+.jmeter-generator-container .ant-table-wrapper {
+  margin-bottom: 8px;
+}
+
+/* Collapse样式 */
+.jmeter-generator-container .ant-collapse-ghost > .ant-collapse-item > .ant-collapse-header {
+  padding: 8px 0;
+  font-weight: 500;
+}
+
+/* Form样式 */
+.jmeter-generator-container .ant-form-item {
+  margin-bottom: 12px;
+}
+
+.jmeter-generator-container .ant-form-item-label {
+  padding-bottom: 4px;
+}
+
+.jmeter-generator-container .ant-form-item-label > label {
+  font-size: 13px;
+}
+
+/* Divider样式 */
+.jmeter-generator-container .ant-divider-horizontal.ant-divider-with-text {
+  margin: 16px 0;
+}
+
+.jmeter-generator-container .ant-divider-inner-text {
+  font-weight: 500;
+  color: #666;
+}
+
+/* 响应式 */
+@media (max-width: 1200px) {
+  .jmeter-generator-container .ant-row {
+    flex-direction: column;
+  }
+  
+  .jmeter-generator-container .ant-col-12 {
+    max-width: 100%;
+    flex: 0 0 100%;
+  }
+  
+  .preview-section {
+    border-left: none;
+    border-top: 1px solid #f0f0f0;
+    padding-left: 0;
+    padding-top: 16px;
+    margin-top: 16px;
+  }
+  
+  .input-section {
+    padding-right: 0;
+  }
+}
+
+/* Alert样式 */
+.jmeter-generator-container .ant-alert {
+  margin-bottom: 16px;
+}
+
+.jmeter-generator-container .ant-alert-description .ant-list-item {
+  padding: 8px 0;
+}
+
+/* Tag样式 */
+.jmeter-generator-container .ant-tag {
+  margin-right: 8px;
+}
+
+/* List样式 */
+.jmeter-generator-container .ant-list-item {
+  padding: 8px 0;
+}
+
+/* Upload样式 */
+.jmeter-generator-container .ant-upload {
+  display: inline-block;
+}
+
+/* Button组合样式 */
+.jmeter-generator-container .ant-space {
+  flex-wrap: wrap;
+}
+
+/* 滚动条样式 */
+.jmx-preview::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.jmx-preview::-webkit-scrollbar-track {
+  background: #2d2d2d;
+  border-radius: 4px;
+}
+
+.jmx-preview::-webkit-scrollbar-thumb {
+  background: #5a5a5a;
+  border-radius: 4px;
+}
+
+.jmx-preview::-webkit-scrollbar-thumb:hover {
+  background: #6a6a6a;
+}
