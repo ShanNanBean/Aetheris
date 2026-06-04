@@ -81,6 +81,17 @@ function AppSider({ collapsed }) {
             label: 'AI对话'
           }
         ]
+      },
+      {
+        key: 'toolbox_group',
+        icon: <ToolOutlined />,
+        label: '工具箱',
+        children: [
+          {
+            key: '/toolbox',
+            label: '工具箱'
+          }
+        ]
       }
     ]
   }

@@ -1,0 +1,46 @@
+.regex-tester { padding: 0; }
+.regex-card { border-radius: var(--radius-md) !important; }
+.regex-highlight-pre {
+  background: var(--color-bg-sunken);
+  padding: 14px;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  white-space: pre-wrap;
+  word-break: break-all;
+  line-height: 1.8;
+  max-height: 300px;
+  overflow-y: auto;
+  border: 1px solid var(--color-border-light);
+}
+.regex-match {
+  background: rgba(250, 173, 20, 0.25);
+  color: inherit;
+  padding: 1px 3px;
+  border-radius: 3px;
+  border-bottom: 2px solid #faad14;
+}
+.regex-results-table table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+.regex-results-table th, .regex-results-table td {
+  padding: 8px 12px;
+  border: 1px solid var(--color-border-light);
+  text-align: left;
+}
+.regex-results-table th {
+  background: var(--color-bg-sunken);
+  font-weight: 600;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+.regex-results-table code {
+  background: var(--color-bg-sunken);
+  padding: 2px 6px;
+  border-radius: var(--radius-xs);
+  font-family: var(--font-mono);
+  font-size: 12px;
+}

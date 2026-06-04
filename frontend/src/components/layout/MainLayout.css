@@ -1,12 +1,45 @@
+/* ============================================
+   Main Layout - Clean content area
+   ============================================ */
+
 .main-layout {
   height: 100%;
   display: flex;
   flex-direction: column;
+  background: var(--color-bg);
 }
 
 .main-content {
   flex: 1;
   overflow: auto;
-  padding: 24px;
-  background: #f0f2f5;
+  padding: var(--space-lg);
+  background: var(--color-bg);
+  position: relative;
+}
+
+/* Subtle inner content area with card feel */
+.main-content > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Smooth page content animation */
+.main-content > * {
+  animation: contentSlideIn 0.3s ease-out;
+}
+
+@keyframes contentSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Dark mode content area */
+.ant-app-dark .main-content {
+  background: #000;
 }

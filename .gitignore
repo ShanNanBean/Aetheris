@@ -24,3 +24,7 @@ Thumbs.db
 
 # Qoder
 .qoder/quests/
+
+# Build output
+deploy/
+frontend/aetheris

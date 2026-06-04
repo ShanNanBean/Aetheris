@@ -1,0 +1,29 @@
+.text-diff { padding: 0; }
+.diff-card { border-radius: 8px; }
+.diff-inputs { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.diff-input-col { display: flex; flex-direction: column; gap: 6px; }
+.diff-result {
+  background: var(--toolbox-bg, #f5f5f5);
+  border-radius: 6px;
+  max-height: 400px;
+  overflow-y: auto;
+  font-family: 'Courier New', monospace;
+  font-size: 13px;
+}
+.diff-table { width: 100%; border-collapse: collapse; }
+.diff-line-no {
+  width: 40px;
+  text-align: right;
+  padding: 0 6px;
+  color: var(--toolbox-text-secondary, #999);
+  user-select: none;
+  border-right: 1px solid var(--toolbox-border, #e8e8e8);
+}
+.diff-marker { width: 20px; text-align: center; font-weight: 700; }
+.diff-text { white-space: pre-wrap; word-break: break-all; padding: 0 8px; }
+.diff-line { line-height: 1.6; }
+.diff-add { background: #e6ffed; }
+.diff-add .diff-marker { color: #52c41a; }
+.diff-remove { background: #fff1f0; }
+.diff-remove .diff-marker { color: #ff4d4f; }
+.diff-equal .diff-marker { color: var(--toolbox-text-secondary, #999); }

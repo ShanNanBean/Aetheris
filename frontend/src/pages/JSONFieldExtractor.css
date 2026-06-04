@@ -1,3 +1,4 @@
+/* JSON Field Extractor - Modern styling */
 .json-field-extractor-container {
   height: 100%;
 }
@@ -24,8 +25,10 @@
 .input-textarea,
 .fields-textarea,
 .output-textarea {
-  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  font-family: var(--font-mono) !important;
   font-size: 13px;
+  line-height: 1.6;
+  border-radius: var(--radius-sm) !important;
 }
 
 .format-section {
@@ -44,6 +47,8 @@
 
 .action-buttons {
   margin-top: 16px;
+  display: flex;
+  gap: 8px;
 }
 
 .error-alert {
@@ -53,8 +58,9 @@
 .stats-section {
   margin-top: 16px;
   padding: 16px;
-  background: #fafafa;
-  border-radius: 8px;
+  background: var(--color-bg-sunken);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border-light);
 }
 
 .fields-status {
@@ -77,23 +83,24 @@
 .output-section .section-header {
   margin-bottom: 8px;
   padding: 8px 12px;
-  background: #f5f5f5;
-  border-radius: 4px;
+  background: var(--color-bg-sunken);
+  border-radius: var(--radius-sm);
 }
 
 .output-textarea {
-  background: #fafafa;
+  background: var(--color-bg-sunken) !important;
 }
 
-/* 暗色主题适配 */
+/* Dark mode */
 .ant-app-dark .stats-section {
-  background: #1f1f1f;
+  background: #141414;
+  border-color: #1f1f1f;
 }
 
 .ant-app-dark .output-section .section-header {
-  background: #1f1f1f;
+  background: #141414;
 }
 
 .ant-app-dark .output-textarea {
-  background: #141414;
+  background: #0a0a0a !important;
 }

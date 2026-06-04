@@ -1,0 +1,11 @@
+.jwt-section { background: var(--toolbox-bg, #f5f5f5); border-radius: 6px; padding: 12px; }
+.jwt-section-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+.jwt-pre {
+  margin: 0;
+  font-family: 'Courier New', monospace;
+  font-size: 13px;
+  white-space: pre-wrap;
+  word-break: break-all;
+  max-height: 200px;
+  overflow-y: auto;
+}

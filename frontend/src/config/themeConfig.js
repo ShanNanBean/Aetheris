@@ -37,20 +37,81 @@ export const lightTheme = {
     // 品牌色
     colorPrimary: '#1677ff',
     // 圆角
-    borderRadius: 6,
+    borderRadius: 8,
     // 字体
-    fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
+    fontFamily: "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif",
+    fontSize: 14,
+    // 色彩
+    colorBgLayout: '#f7f8fa',
+    colorBgContainer: '#ffffff',
+    colorBgElevated: '#ffffff',
+    colorBorder: '#e5e7eb',
+    colorBorderSecondary: '#f0f0f0',
+    colorText: '#111827',
+    colorTextSecondary: '#6b7280',
+    colorTextTertiary: '#9ca3af',
+    // 阴影
+    boxShadow: '0 1px 3px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.04)',
+    boxShadowSecondary: '0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -2px rgba(0, 0, 0, 0.04)',
+    // 控件
+    controlHeight: 36,
+    controlHeightLG: 40,
+    controlHeightSM: 28,
+    // 动效
+    motionDurationFast: '0.15s',
+    motionDurationMid: '0.2s',
+    motionDurationSlow: '0.3s',
   },
   components: {
     Layout: {
-      headerBg: '#001529',
+      headerBg: '#0a1628',
       headerColor: '#fff',
-      siderBg: '#001529',
-      bodyBg: '#f0f2f5',
+      siderBg: '#0a1628',
+      bodyBg: '#f7f8fa',
+      footerBg: '#ffffff',
+      footerPadding: '12px 24px',
     },
     Menu: {
-      darkItemBg: '#001529',
-      darkSubMenuItemBg: '#000c17',
+      darkItemBg: '#0a1628',
+      darkSubMenuItemBg: '#060e1a',
+      darkItemSelectedBg: 'rgba(22, 119, 255, 0.15)',
+      darkItemColor: 'rgba(255, 255, 255, 0.55)',
+      darkItemHoverColor: 'rgba(255, 255, 255, 0.88)',
+      darkItemSelectedColor: '#fff',
+      itemBorderRadius: 6,
+      itemMarginInline: 8,
+      iconSize: 16,
+      collapsedIconSize: 18,
+    },
+    Card: {
+      borderRadiusLG: 10,
+      paddingLG: 20,
+    },
+    Button: {
+      borderRadius: 8,
+      controlHeight: 36,
+      paddingInline: 16,
+    },
+    Input: {
+      borderRadius: 8,
+      controlHeight: 36,
+      paddingInline: 12,
+    },
+    Select: {
+      borderRadius: 8,
+      controlHeight: 36,
+    },
+    Table: {
+      borderRadius: 10,
+      headerBg: '#f9fafb',
+      headerColor: '#374151',
+      rowHoverBg: '#f3f4f6',
+    },
+    Tag: {
+      borderRadiusSM: 4,
+    },
+    Switch: {
+      borderRadius: 12,
     },
   },
 }
@@ -59,26 +120,66 @@ export const lightTheme = {
 export const darkTheme = {
   token: {
     colorPrimary: '#1677ff',
-    borderRadius: 6,
-    fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
-    // 暗色主题色彩
+    borderRadius: 8,
+    fontFamily: "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif",
+    fontSize: 14,
+    // 暗色主题色彩 - premium feel
     colorBgContainer: '#141414',
-    colorBgElevated: '#1f1f1f',
+    colorBgElevated: '#1a1a1a',
     colorBgLayout: '#000000',
-    colorText: 'rgba(255, 255, 255, 0.85)',
-    colorTextSecondary: 'rgba(255, 255, 255, 0.65)',
-    colorBorder: '#303030',
+    colorText: 'rgba(255, 255, 255, 0.88)',
+    colorTextSecondary: 'rgba(255, 255, 255, 0.56)',
+    colorTextTertiary: 'rgba(255, 255, 255, 0.36)',
+    colorBorder: '#1f1f1f',
+    colorBorderSecondary: '#262626',
+    // Shadows
+    boxShadow: '0 1px 3px rgba(0, 0, 0, 0.25), 0 1px 2px rgba(0, 0, 0, 0.15)',
+    boxShadowSecondary: '0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -2px rgba(0, 0, 0, 0.2)',
+    // Controls
+    controlHeight: 36,
+    controlHeightLG: 40,
+    controlHeightSM: 28,
   },
   components: {
     Layout: {
-      headerBg: '#141414',
+      headerBg: '#0a0a0a',
       headerColor: '#fff',
-      siderBg: '#141414',
+      siderBg: '#050505',
       bodyBg: '#000000',
+      footerBg: '#0a0a0a',
     },
     Menu: {
-      darkItemBg: '#141414',
-      darkSubMenuItemBg: '#0a0a0a',
+      darkItemBg: '#050505',
+      darkSubMenuItemBg: '#020202',
+      darkItemSelectedBg: 'rgba(22, 119, 255, 0.12)',
+      darkItemColor: 'rgba(255, 255, 255, 0.45)',
+      darkItemHoverColor: 'rgba(255, 255, 255, 0.85)',
+      darkItemSelectedColor: '#4096ff',
+    },
+    Card: {
+      borderRadiusLG: 10,
+      colorBgContainer: '#141414',
+    },
+    Button: {
+      borderRadius: 8,
+      controlHeight: 36,
+    },
+    Input: {
+      borderRadius: 8,
+      controlHeight: 36,
+      colorBgContainer: '#1a1a1a',
+      colorBorder: '#2a2a2a',
+    },
+    Select: {
+      borderRadius: 8,
+      controlHeight: 36,
+      colorBgContainer: '#1a1a1a',
+      colorBorder: '#2a2a2a',
+    },
+    Table: {
+      borderRadius: 10,
+      headerBg: '#1a1a1a',
+      rowHoverBg: '#1f1f1f',
     },
   },
 }
@@ -99,7 +200,7 @@ export const generateTheme = (colorKey = 'blue', isDark = false) => {
       ...baseTheme.token,
       colorPrimary: primaryColor,
     },
-    algorithm: isDark ? undefined : undefined, // 算法在 ConfigProvider 中使用 theme.darkAlgorithm
+    algorithm: isDark ? undefined : undefined,
   }
 }
 

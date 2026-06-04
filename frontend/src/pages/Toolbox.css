@@ -1,0 +1,416 @@
+/* ============================================
+   Toolbox - Modern developer tool interface
+   ============================================ */
+
+.toolbox-container {
+  display: flex;
+  height: calc(100vh - var(--header-height) - 40px);
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  background: var(--color-bg-elevated);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-border);
+}
+
+/* ============================================
+   Sidebar
+   ============================================ */
+
+.toolbox-sidebar {
+  width: 260px;
+  min-width: 260px;
+  background: var(--color-bg-elevated);
+  border-right: 1px solid var(--color-border-light);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.toolbox-sidebar-header {
+  padding: 16px 16px 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.toolbox-sidebar-header .ant-typography {
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.toolbox-search {
+  padding: 8px 12px 12px;
+}
+
+.toolbox-search .ant-input-affix-wrapper {
+  border-radius: var(--radius-md) !important;
+  background: var(--color-bg-sunken) !important;
+  border: 1px solid transparent !important;
+  padding: 6px 10px;
+  transition: all var(--transition-fast) !important;
+}
+
+.toolbox-search .ant-input-affix-wrapper:focus,
+.toolbox-search .ant-input-affix-wrapper-focused {
+  background: var(--color-bg-elevated) !important;
+  border-color: #4096ff !important;
+  box-shadow: 0 0 0 2px rgba(22, 119, 255, 0.08) !important;
+}
+
+.toolbox-menu {
+  flex: 1;
+  overflow-y: auto;
+  padding: 0 8px 16px;
+}
+
+.toolbox-category {
+  margin-bottom: 6px;
+}
+
+.toolbox-category-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 8px 4px;
+}
+
+.toolbox-category-label .ant-typography {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-text-tertiary);
+}
+
+.toolbox-menu-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  font-size: 13px;
+  color: var(--color-text-secondary);
+  position: relative;
+  margin: 1px 0;
+}
+
+.toolbox-menu-item:hover {
+  background: var(--color-bg-sunken);
+  color: var(--color-text-primary);
+  transform: translateX(2px);
+}
+
+.toolbox-menu-item.active {
+  background: linear-gradient(90deg, rgba(22, 119, 255, 0.1) 0%, rgba(22, 119, 255, 0.04) 100%);
+  color: #1677ff;
+  font-weight: 500;
+}
+
+.toolbox-menu-item.active::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 4px;
+  bottom: 4px;
+  width: 3px;
+  background: linear-gradient(180deg, #4096ff, #1677ff);
+  border-radius: 0 2px 2px 0;
+}
+
+.toolbox-menu-icon {
+  font-size: 16px;
+  width: 22px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.toolbox-menu-name {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ============================================
+   Content Area
+   ============================================ */
+
+.toolbox-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 0;
+  background: var(--color-bg);
+}
+
+/* Tool wrapper */
+.toolbox-tool-wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.toolbox-tool-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 24px;
+  background: var(--color-bg-elevated);
+  border-bottom: 1px solid var(--color-border-light);
+  flex-shrink: 0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  backdrop-filter: blur(8px);
+}
+
+.toolbox-tool-icon {
+  font-size: 28px;
+}
+
+.toolbox-back-link {
+  color: #1677ff;
+  cursor: pointer;
+  font-size: 13px;
+  white-space: nowrap;
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+}
+
+.toolbox-back-link:hover {
+  background: rgba(22, 119, 255, 0.06);
+  text-decoration: none;
+}
+
+.toolbox-tool-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px 24px;
+}
+
+/* ============================================
+   Welcome / Dashboard
+   ============================================ */
+
+.toolbox-welcome {
+  padding: 40px 32px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.toolbox-welcome-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.toolbox-welcome-header .ant-typography:first-child {
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 8px;
+}
+
+.toolbox-welcome-header .ant-typography:last-child {
+  font-size: 15px;
+  color: var(--color-text-tertiary);
+}
+
+.toolbox-dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.toolbox-dashboard-category-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.toolbox-dashboard-tools {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 12px;
+}
+
+/* Dashboard cards */
+.toolbox-dashboard-card {
+  border-radius: var(--radius-md) !important;
+  cursor: pointer;
+  transition: all var(--transition-base) !important;
+  border: 1px solid var(--color-border-light) !important;
+  background: var(--color-bg-elevated) !important;
+  overflow: hidden;
+  position: relative;
+}
+
+.toolbox-dashboard-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--card-accent, #1677ff), transparent);
+  opacity: 0;
+  transition: opacity var(--transition-base);
+}
+
+.toolbox-dashboard-card:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: var(--shadow-md) !important;
+  border-color: rgba(22, 119, 255, 0.2) !important;
+}
+
+.toolbox-dashboard-card:hover::before {
+  opacity: 1;
+}
+
+.toolbox-dashboard-card:active {
+  transform: translateY(0) !important;
+  box-shadow: var(--shadow-xs) !important;
+}
+
+.toolbox-dashboard-card .ant-card-body {
+  padding: 16px !important;
+}
+
+.toolbox-dashboard-card-content {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.toolbox-dashboard-card-icon {
+  font-size: 32px;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.toolbox-dashboard-card-content .ant-typography:first-of-type {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.toolbox-dashboard-card-content .ant-typography:last-of-type {
+  font-size: 12px;
+  color: var(--color-text-tertiary);
+  line-height: 1.4;
+}
+
+/* ============================================
+   Tool Input/Output Styling
+   ============================================ */
+
+.toolbox-tool-body .ant-input-textarea textarea,
+.toolbox-tool-body .ant-input {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  line-height: 1.6;
+  border-radius: var(--radius-sm) !important;
+}
+
+.toolbox-tool-body .ant-card {
+  border-radius: var(--radius-md) !important;
+  box-shadow: var(--shadow-xs) !important;
+  border: 1px solid var(--color-border-light) !important;
+}
+
+/* ============================================
+   Dark Mode
+   ============================================ */
+
+.dark-theme .toolbox-sidebar,
+.ant-app-dark .toolbox-sidebar {
+  background: #0a0a0a;
+  border-right-color: rgba(255, 255, 255, 0.04);
+}
+
+.dark-theme .toolbox-menu-item,
+.ant-app-dark .toolbox-menu-item {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.dark-theme .toolbox-menu-item:hover,
+.ant-app-dark .toolbox-menu-item:hover {
+  background: rgba(255, 255, 255, 0.04);
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.dark-theme .toolbox-menu-item.active,
+.ant-app-dark .toolbox-menu-item.active {
+  background: linear-gradient(90deg, rgba(22, 119, 255, 0.12) 0%, rgba(22, 119, 255, 0.04) 100%);
+  color: #4096ff;
+}
+
+.dark-theme .toolbox-content,
+.ant-app-dark .toolbox-content {
+  background: #050505;
+}
+
+.dark-theme .toolbox-tool-header,
+.ant-app-dark .toolbox-tool-header {
+  background: #0a0a0a;
+  border-bottom-color: rgba(255, 255, 255, 0.04);
+}
+
+.dark-theme .toolbox-dashboard-card,
+.ant-app-dark .toolbox-dashboard-card {
+  background: #141414 !important;
+  border-color: rgba(255, 255, 255, 0.06) !important;
+}
+
+.dark-theme .toolbox-dashboard-card:hover,
+.ant-app-dark .toolbox-dashboard-card:hover {
+  border-color: rgba(22, 119, 255, 0.2) !important;
+}
+
+.dark-theme .toolbox-container,
+.ant-app-dark .toolbox-container {
+  background: #0a0a0a;
+  border-color: rgba(255, 255, 255, 0.04);
+}
+
+.dark-theme .toolbox-search .ant-input-affix-wrapper,
+.ant-app-dark .toolbox-search .ant-input-affix-wrapper {
+  background: #141414 !important;
+  border-color: rgba(255, 255, 255, 0.06) !important;
+}
+
+.dark-theme .toolbox-dashboard-category-header,
+.ant-app-dark .toolbox-dashboard-category-header {
+  border-bottom-color: rgba(255, 255, 255, 0.04);
+}
+
+/* CSS variables (keep for backwards compatibility) */
+:root {
+  --toolbox-sidebar-bg: #fff;
+  --toolbox-border: #f0f0f0;
+  --toolbox-text: #333;
+  --toolbox-text-secondary: #999;
+  --toolbox-hover-bg: #f5f5f5;
+  --toolbox-active-bg: #e6f7ff;
+  --toolbox-active-color: #1677ff;
+  --toolbox-content-bg: #f5f7fa;
+  --toolbox-bg: #f5f5f5;
+}
+
+.dark-theme {
+  --toolbox-sidebar-bg: #0a0a0a;
+  --toolbox-border: rgba(255, 255, 255, 0.04);
+  --toolbox-text: rgba(255, 255, 255, 0.85);
+  --toolbox-text-secondary: rgba(255, 255, 255, 0.45);
+  --toolbox-hover-bg: rgba(255, 255, 255, 0.04);
+  --toolbox-active-bg: rgba(22, 119, 255, 0.12);
+  --toolbox-active-color: #4096ff;
+  --toolbox-content-bg: #050505;
+  --toolbox-bg: #0a0a0a;
+}

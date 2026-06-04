@@ -1,3 +1,4 @@
+/* JSON Formatter - Modern styling */
 .json-formatter-container {
   height: 100%;
 }
@@ -5,7 +6,7 @@
 .formatter-content {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 20px;
 }
 
 .input-section {
@@ -23,23 +24,27 @@
 
 .input-textarea,
 .result-textarea {
-  font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+  font-family: var(--font-mono) !important;
   font-size: 13px;
+  line-height: 1.6;
+  border-radius: var(--radius-sm) !important;
 }
 
 .action-buttons {
   display: flex;
   justify-content: flex-start;
+  gap: 8px;
 }
 
 .stats-section {
   padding: 16px;
-  background: #fafafa;
-  border-radius: 8px;
+  background: var(--color-bg-sunken);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border-light);
 }
 
 .output-section {
-  margin-top: 16px;
+  margin-top: 8px;
 }
 
 .result-container {
@@ -52,4 +57,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+/* Dark mode */
+.ant-app-dark .stats-section {
+  background: #141414;
+  border-color: #1f1f1f;
 }

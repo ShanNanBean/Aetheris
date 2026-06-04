@@ -1,0 +1,27 @@
+.ts-results {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.ts-result-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  background: var(--color-bg-sunken);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border-light);
+}
+.ts-result-label {
+  width: 140px;
+  flex-shrink: 0;
+  font-weight: 600;
+  font-size: 13px;
+}
+.ts-result-value code {
+  font-size: 13px;
+  font-family: var(--font-mono);
+  background: rgba(22, 119, 255, 0.06);
+  padding: 2px 6px;
+  border-radius: var(--radius-xs);
+}

@@ -1,0 +1,16 @@
+.json-diff-inputs { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.json-diff-col { display: flex; flex-direction: column; gap: 6px; }
+.json-diff-list { display: flex; flex-direction: column; gap: 6px; }
+.json-diff-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 13px;
+}
+.json-diff-added { background: #f6ffed; }
+.json-diff-removed { background: #fff1f0; }
+.json-diff-changed { background: #fffbe6; }
+.diff-val-old { color: #ff4d4f; font-family: monospace; }
+.diff-val-new { color: #52c41a; font-family: monospace; }

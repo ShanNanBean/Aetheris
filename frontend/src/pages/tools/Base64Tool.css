@@ -1,0 +1,16 @@
+.base64-result {
+  background: var(--color-bg-sunken);
+  border-radius: var(--radius-sm);
+  padding: 14px;
+  border: 1px solid var(--color-border-light);
+}
+.base64-result-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.base64-result-textarea {
+  font-family: var(--font-mono) !important;
+  font-size: 13px;
+}
