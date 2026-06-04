@@ -1,16 +1,61 @@
-.json-diff-inputs { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-.json-diff-col { display: flex; flex-direction: column; gap: 6px; }
-.json-diff-list { display: flex; flex-direction: column; gap: 6px; }
+.json-diff {
+  padding: 0;
+  height: 100%;
+}
+.json-diff .ant-card {
+  border-radius: var(--radius-lg) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06) !important;
+  border: 1px solid var(--color-border-light) !important;
+}
+.json-diff .ant-card-head {
+  border-bottom: 1px solid var(--color-border-light);
+  min-height: 52px;
+}
+.json-diff-inputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.json-diff-col {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.json-diff-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-height: 400px;
+  overflow-y: auto;
+}
 .json-diff-item {
   display: flex;
   align-items: center;
   gap: 8px;
-  padding: 6px 10px;
-  border-radius: 6px;
+  padding: 8px 12px;
+  border-radius: var(--radius-md);
   font-size: 13px;
+  border: 1px solid var(--color-border-light);
 }
-.json-diff-added { background: #f6ffed; }
-.json-diff-removed { background: #fff1f0; }
-.json-diff-changed { background: #fffbe6; }
-.diff-val-old { color: #ff4d4f; font-family: monospace; }
-.diff-val-new { color: #52c41a; font-family: monospace; }
+.json-diff-added {
+  background: rgba(82, 196, 26, 0.06);
+  border-color: rgba(82, 196, 26, 0.15);
+}
+.json-diff-removed {
+  background: rgba(255, 77, 79, 0.06);
+  border-color: rgba(255, 77, 79, 0.15);
+}
+.json-diff-changed {
+  background: rgba(250, 173, 20, 0.06);
+  border-color: rgba(250, 173, 20, 0.15);
+}
+.diff-val-old {
+  color: #ff4d4f;
+  font-family: var(--font-mono);
+  font-size: 12px;
+}
+.diff-val-new {
+  color: #52c41a;
+  font-family: var(--font-mono);
+  font-size: 12px;
+}

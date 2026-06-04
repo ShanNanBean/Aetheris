@@ -1,5 +1,5 @@
 import React, { useState, useCallback } from 'react'
-import { Input, Button, Space, Typography, Card, Select, message } from 'antd'
+import { Input, Button, Space, Typography, Card, Select, InputNumber, message } from 'antd'
 import { SwapOutlined, CopyOutlined } from '@ant-design/icons'
 import './NumberBaseConverter.css'
 

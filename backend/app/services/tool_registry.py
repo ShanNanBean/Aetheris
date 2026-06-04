@@ -119,6 +119,38 @@ class ToolRegistry:
             executor=jmeter_generator.generate_jmeter_script
         )
         
+        # === 纯前端工具（数据处理） ===
+        frontend_tools = [
+            ("regex_test", "正则测试", "正则表达式匹配测试", "search"),
+            ("text_diff", "文本对比", "逐行文本差异对比", "swap"),
+            ("string_toolkit", "字符串工具", "大小写/转义/统计/替换", "font-size"),
+            ("json_diff", "JSON对比", "JSON结构化差异对比", "diff"),
+            ("jsonpath_query", "JSONPath查询", "JSONPath表达式查询", "search"),
+            ("timestamp_converter", "时间戳转换", "时间戳与日期互转", "clock-circle"),
+            ("base64_tool", "Base64编解码", "Base64编码解码", "lock"),
+            ("url_codec", "URL编解码", "URL编码与解码", "link"),
+            ("jwt_decoder", "JWT解码", "JWT Token解析", "key"),
+            ("hash_tool", "哈希计算", "MD5/SHA1/SHA256/SHA512", "lock"),
+            ("crontab_tool", "Crontab工具", "Cron表达式解析生成", "calendar"),
+            ("random_generator", "随机生成", "UUID/密码/IP/MAC等", "experiment"),
+            ("color_converter", "颜色转换", "HEX/RGB/HSL互转", "bg-colors"),
+            ("number_base_converter", "进制转换", "2-36进制互转", "calculator"),
+            ("ascii_converter", "ASCII转换", "字符与ASCII码互转", "font-colors"),
+        ]
+
+        for tool_id, name, desc, icon in frontend_tools:
+            self.register_tool(
+                metadata=ToolMetadata(
+                    tool_id=tool_id,
+                    name=name,
+                    description=desc,
+                    category="数据处理",
+                    icon=icon,
+                    keywords=[name]
+                ),
+                executor=None
+            )
+
         logger.info("默认工具已注册")
     
     def register_tool(

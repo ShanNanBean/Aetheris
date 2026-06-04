@@ -1,9 +1,20 @@
-.regex-tester { padding: 0; }
-.regex-card { border-radius: var(--radius-md) !important; }
+.regex-tester {
+  padding: 0;
+  height: 100%;
+}
+.regex-tester .ant-card {
+  border-radius: var(--radius-lg) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06) !important;
+  border: 1px solid var(--color-border-light) !important;
+}
+.regex-tester .ant-card-head {
+  border-bottom: 1px solid var(--color-border-light);
+  min-height: 52px;
+}
 .regex-highlight-pre {
   background: var(--color-bg-sunken);
   padding: 14px;
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius-md);
   font-family: var(--font-mono);
   font-size: 13px;
   white-space: pre-wrap;

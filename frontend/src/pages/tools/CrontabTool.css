@@ -1,1 +1,13 @@
-.crontab-tool { padding: 0; }
+.crontab-tool {
+  padding: 0;
+  height: 100%;
+}
+.crontab-tool .ant-card {
+  border-radius: var(--radius-lg) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06) !important;
+  border: 1px solid var(--color-border-light) !important;
+}
+.crontab-tool .ant-card-head {
+  border-bottom: 1px solid var(--color-border-light);
+  min-height: 52px;
+}

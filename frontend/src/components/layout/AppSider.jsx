@@ -9,7 +9,19 @@ import {
   ToolOutlined,
   QrcodeOutlined,
   BarcodeOutlined,
-  ThunderboltOutlined
+  ThunderboltOutlined,
+  SearchOutlined,
+  SwapOutlined,
+  FontSizeOutlined,
+  DiffOutlined,
+  ClockCircleOutlined,
+  LockOutlined,
+  LinkOutlined,
+  KeyOutlined,
+  CalendarOutlined,
+  ExperimentOutlined,
+  BgColorsOutlined,
+  FontColorsOutlined
 } from '@ant-design/icons'
 import { getNavigation } from '../../services/api'
 import './AppSider.css'
@@ -25,7 +37,20 @@ const iconMap = {
   tool: <ToolOutlined />,
   qrcode: <QrcodeOutlined />,
   barcode: <BarcodeOutlined />,
-  thunderbolt: <ThunderboltOutlined />
+  thunderbolt: <ThunderboltOutlined />,
+  // 数据处理工具图标
+  search: <SearchOutlined />,
+  swap: <SwapOutlined />,
+  'font-size': <FontSizeOutlined />,
+  diff: <DiffOutlined />,
+  'clock-circle': <ClockCircleOutlined />,
+  lock: <LockOutlined />,
+  link: <LinkOutlined />,
+  key: <KeyOutlined />,
+  calendar: <CalendarOutlined />,
+  experiment: <ExperimentOutlined />,
+  'bg-colors': <BgColorsOutlined />,
+  'font-colors': <FontColorsOutlined />,
 }
 
 function AppSider({ collapsed }) {
@@ -47,8 +72,6 @@ function AppSider({ collapsed }) {
       const response = await getNavigation()
       if (response.code === 0) {
         const items = buildMenuItems(response.data)
-        // 始终追加工具箱入口
-        items.push(getToolboxMenuItem())
         setMenuItems(items)
       }
     } catch (error) {
@@ -71,18 +94,6 @@ function AppSider({ collapsed }) {
     }))
   }
 
-  const getToolboxMenuItem = () => ({
-    key: 'toolbox_group',
-    icon: <ToolOutlined />,
-    label: '工具箱',
-    children: [
-      {
-        key: '/toolbox',
-        label: '工具箱'
-      }
-    ]
-  })
-
   const getDefaultMenu = () => {
     return [
       {
@@ -95,8 +106,7 @@ function AppSider({ collapsed }) {
             label: 'AI对话'
           }
         ]
-      },
-      getToolboxMenuItem()
+      }
     ]
   }
 
