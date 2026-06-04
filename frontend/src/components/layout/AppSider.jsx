@@ -47,6 +47,8 @@ function AppSider({ collapsed }) {
       const response = await getNavigation()
       if (response.code === 0) {
         const items = buildMenuItems(response.data)
+        // 始终追加工具箱入口
+        items.push(getToolboxMenuItem())
         setMenuItems(items)
       }
     } catch (error) {
@@ -69,6 +71,18 @@ function AppSider({ collapsed }) {
     }))
   }
 
+  const getToolboxMenuItem = () => ({
+    key: 'toolbox_group',
+    icon: <ToolOutlined />,
+    label: '工具箱',
+    children: [
+      {
+        key: '/toolbox',
+        label: '工具箱'
+      }
+    ]
+  })
+
   const getDefaultMenu = () => {
     return [
       {
@@ -82,17 +96,7 @@ function AppSider({ collapsed }) {
           }
         ]
       },
-      {
-        key: 'toolbox_group',
-        icon: <ToolOutlined />,
-        label: '工具箱',
-        children: [
-          {
-            key: '/toolbox',
-            label: '工具箱'
-          }
-        ]
-      }
+      getToolboxMenuItem()
     ]
   }
 
