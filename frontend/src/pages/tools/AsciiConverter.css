@@ -4,15 +4,15 @@
 }
 .ascii-converter .ant-card {
   border-radius: var(--radius-lg) !important;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06) !important;
-  border: 1px solid var(--color-border-light) !important;
+  box-shadow: var(--shadow-sm) !important;
+  border: 1px solid var(--color-border) !important;
 }
 .ascii-converter .ant-card-head {
-  border-bottom: 1px solid var(--color-border-light);
+  border-bottom: 1px solid var(--color-border);
   min-height: 52px;
 }
 .ascii-result {
-  border: 1px solid var(--color-border-light);
+  border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   overflow: hidden;
 }
@@ -22,13 +22,14 @@
   align-items: center;
   padding: 8px 12px;
   background: var(--color-bg-sunken);
-  border-bottom: 1px solid var(--color-border-light);
+  border-bottom: 1px solid var(--color-border);
 }
 .ascii-result-textarea textarea {
   border: none !important;
   border-radius: 0 !important;
   background: var(--color-bg-sunken) !important;
 }
+body.night .ascii-result-textarea textarea,
 .ant-app-dark .ascii-result-textarea textarea {
-  background: #0a0a0a !important;
+  background: #222238 !important;
 }

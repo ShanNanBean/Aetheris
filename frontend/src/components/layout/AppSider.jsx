@@ -123,7 +123,7 @@ function AppSider({ collapsed }) {
       className="app-sider"
     >
       <Menu
-        theme="dark"
+        theme="light"
         mode="inline"
         selectedKeys={[selectedKey]}
         items={menuItems}

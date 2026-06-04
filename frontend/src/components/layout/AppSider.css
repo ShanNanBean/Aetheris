@@ -1,25 +1,18 @@
 /* ============================================
-   Sidebar - Modern navigation with accent bar
+   Sidebar - 温暖亮色导航
    ============================================ */
 
 .app-sider {
-  background: linear-gradient(180deg, #0a1628 0%, #0c1829 100%) !important;
-  border-right: 1px solid rgba(255, 255, 255, 0.04);
+  background: #F5F0E8 !important;
+  border-right: 1px solid #E0D8CC;
   position: relative;
   z-index: 10;
-  box-shadow: 1px 0 8px rgba(0, 0, 0, 0.06);
+  box-shadow: 1px 0 6px rgba(0, 0, 0, 0.04);
 }
 
-/* Subtle inner glow on right edge */
+/* 移除右边发光效果 */
 .app-sider::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 1px;
-  background: linear-gradient(180deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.02) 100%);
-  pointer-events: none;
+  display: none;
 }
 
 .sider-menu {
@@ -28,48 +21,49 @@
   padding: 8px 0;
 }
 
-/* Menu item styling */
-.sider-menu.ant-menu-dark .ant-menu-item {
+/* Menu item styling - light theme */
+.sider-menu.ant-menu .ant-menu-item {
   margin: 2px 8px !important;
-  border-radius: var(--radius-sm) !important;
+  border-radius: var(--radius-md) !important;
   height: 40px !important;
   line-height: 40px !important;
   padding-left: 12px !important;
   font-size: 13px;
-  color: rgba(255, 255, 255, 0.55) !important;
-  transition: all var(--transition-fast) !important;
+  color: var(--ink-light) !important;
+  transition: all var(--transition-base) !important;
   position: relative;
   overflow: hidden;
 }
 
-.sider-menu.ant-menu-dark .ant-menu-item:hover {
-  color: rgba(255, 255, 255, 0.9) !important;
-  background: rgba(255, 255, 255, 0.06) !important;
+.sider-menu.ant-menu .ant-menu-item:hover {
+  color: var(--ink) !important;
+  background: rgba(184, 132, 92, 0.08) !important;
 }
 
 /* Active item with left accent bar */
-.sider-menu.ant-menu-dark .ant-menu-item-selected {
-  color: #fff !important;
-  background: linear-gradient(90deg, rgba(22, 119, 255, 0.18) 0%, rgba(22, 119, 255, 0.06) 100%) !important;
+.sider-menu.ant-menu .ant-menu-item-selected {
+  color: var(--accent) !important;
+  background: rgba(184, 132, 92, 0.12) !important;
   box-shadow: none !important;
+  font-weight: 500;
 }
 
-.sider-menu.ant-menu-dark .ant-menu-item-selected::before {
+.sider-menu.ant-menu .ant-menu-item-selected::before {
   content: '';
   position: absolute;
   left: 0;
   top: 6px;
   bottom: 6px;
   width: 3px;
-  background: linear-gradient(180deg, #4096ff, #1677ff);
+  background: linear-gradient(180deg, #D4A574, #B8845C);
   border-radius: 0 2px 2px 0;
-  box-shadow: 0 0 8px rgba(22, 119, 255, 0.3);
+  box-shadow: 0 0 6px rgba(184, 132, 92, 0.25);
 }
 
 /* Submenu header */
-.sider-menu.ant-menu-dark .ant-menu-submenu-title {
+.sider-menu.ant-menu .ant-menu-submenu-title {
   margin: 4px 8px 2px !important;
-  border-radius: var(--radius-sm) !important;
+  border-radius: var(--radius-md) !important;
   height: 38px !important;
   line-height: 38px !important;
   padding-left: 12px !important;
@@ -77,26 +71,26 @@
   font-weight: 600;
   letter-spacing: 0.02em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.3) !important;
+  color: var(--ink-muted) !important;
 }
 
-.sider-menu.ant-menu-dark .ant-menu-submenu-title:hover {
-  color: rgba(255, 255, 255, 0.6) !important;
+.sider-menu.ant-menu .ant-menu-submenu-title:hover {
+  color: var(--ink-light) !important;
   background: transparent !important;
 }
 
 /* Icon styling in menu items */
-.sider-menu.ant-menu-dark .ant-menu-item .ant-menu-item-icon,
-.sider-menu.ant-menu-dark .ant-menu-item .anticon {
+.sider-menu.ant-menu .ant-menu-item .ant-menu-item-icon,
+.sider-menu.ant-menu .ant-menu-item .anticon {
   font-size: 16px;
   opacity: 0.7;
-  transition: opacity var(--transition-fast);
+  transition: opacity var(--transition-base);
 }
 
-.sider-menu.ant-menu-dark .ant-menu-item:hover .ant-menu-item-icon,
-.sider-menu.ant-menu-dark .ant-menu-item:hover .anticon,
-.sider-menu.ant-menu-dark .ant-menu-item-selected .ant-menu-item-icon,
-.sider-menu.ant-menu-dark .ant-menu-item-selected .anticon {
+.sider-menu.ant-menu .ant-menu-item:hover .ant-menu-item-icon,
+.sider-menu.ant-menu .ant-menu-item:hover .anticon,
+.sider-menu.ant-menu .ant-menu-item-selected .ant-menu-item-icon,
+.sider-menu.ant-menu .ant-menu-item-selected .anticon {
   opacity: 1;
 }
 
@@ -108,22 +102,51 @@
 }
 
 /* Divider between menu groups */
-.sider-menu.ant-menu-dark .ant-menu-item-group-title {
+.sider-menu.ant-menu .ant-menu-item-group-title {
   padding: 12px 16px 4px;
   font-size: 11px;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  color: rgba(255, 255, 255, 0.2);
+  color: var(--ink-muted);
 }
 
-/* Dark theme adjustments */
+/* Dark theme */
+body.night .app-sider,
 .ant-app-dark .app-sider {
-  background: linear-gradient(180deg, #050505 0%, #0a0a0a 100%) !important;
-  border-right-color: rgba(255, 255, 255, 0.03);
+  background: #1a1a2e !important;
+  border-right-color: rgba(255, 255, 255, 0.06);
   box-shadow: 1px 0 8px rgba(0, 0, 0, 0.15);
 }
 
-.ant-app-dark .sider-menu.ant-menu-dark .ant-menu-item-selected {
-  background: linear-gradient(90deg, rgba(22, 119, 255, 0.15) 0%, rgba(22, 119, 255, 0.04) 100%) !important;
+body.night .sider-menu.ant-menu .ant-menu-item,
+.ant-app-dark .sider-menu.ant-menu .ant-menu-item {
+  color: rgba(212, 212, 212, 0.65) !important;
+}
+
+body.night .sider-menu.ant-menu .ant-menu-item:hover,
+.ant-app-dark .sider-menu.ant-menu .ant-menu-item:hover {
+  color: #d4d4d4 !important;
+  background: rgba(212, 165, 116, 0.08) !important;
+}
+
+body.night .sider-menu.ant-menu .ant-menu-item-selected,
+.ant-app-dark .sider-menu.ant-menu .ant-menu-item-selected {
+  color: #D4A574 !important;
+  background: rgba(212, 165, 116, 0.15) !important;
+}
+
+body.night .sider-menu.ant-menu .ant-menu-submenu-title,
+.ant-app-dark .sider-menu.ant-menu .ant-menu-submenu-title {
+  color: rgba(212, 212, 212, 0.35) !important;
+}
+
+body.night .sider-menu.ant-menu .ant-menu-submenu-title:hover,
+.ant-app-dark .sider-menu.ant-menu .ant-menu-submenu-title:hover {
+  color: rgba(212, 212, 212, 0.6) !important;
+}
+
+body.night .sider-menu.ant-menu .ant-menu-item-group-title,
+.ant-app-dark .sider-menu.ant-menu .ant-menu-item-group-title {
+  color: rgba(212, 212, 212, 0.25);
 }

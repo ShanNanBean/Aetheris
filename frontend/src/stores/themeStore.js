@@ -4,34 +4,31 @@ import { generateTheme, themeColors } from '../config/themeConfig'
 
 /**
  * 主题状态管理
- * 支持主题色切换、亮色/暗色模式切换
+ * 支持亮色/暗色模式切换
  * 使用 localStorage 持久化存储
  */
 const useThemeStore = create(
   persist(
     (set, get) => ({
-      // 当前主题色 key
-      colorKey: 'blue',
+      // 固定使用大地色主题
+      colorKey: 'earth',
       // 是否暗色模式
       isDarkMode: false,
-      // 预设主题色列表
+      // 主题色列表
       themeColors: themeColors,
-
-      /**
-       * 切换主题色
-       * @param {string} colorKey - 主题色键名
-       */
-      setColorKey: (colorKey) => {
-        if (themeColors[colorKey]) {
-          set({ colorKey })
-        }
-      },
 
       /**
        * 切换暗色/亮色模式
        */
       toggleDarkMode: () => {
-        set((state) => ({ isDarkMode: !state.isDarkMode }))
+        const newDark = !get().isDarkMode
+        // 添加/移除 body.night 类（匹配主站点约定）
+        if (newDark) {
+          document.body.classList.add('night')
+        } else {
+          document.body.classList.remove('night')
+        }
+        set({ isDarkMode: newDark })
       },
 
       /**
@@ -39,6 +36,11 @@ const useThemeStore = create(
        * @param {boolean} isDark - 是否暗色模式
        */
       setDarkMode: (isDark) => {
+        if (isDark) {
+          document.body.classList.add('night')
+        } else {
+          document.body.classList.remove('night')
+        }
         set({ isDarkMode: isDark })
       },
 
@@ -47,15 +49,16 @@ const useThemeStore = create(
        * @returns {object} 主题配置对象
        */
       getThemeConfig: () => {
-        const { colorKey, isDarkMode } = get()
-        return generateTheme(colorKey, isDarkMode)
+        const { isDarkMode } = get()
+        return generateTheme('earth', isDarkMode)
       },
 
       /**
        * 重置为默认主题
        */
       resetTheme: () => {
-        set({ colorKey: 'blue', isDarkMode: false })
+        document.body.classList.remove('night')
+        set({ colorKey: 'earth', isDarkMode: false })
       },
     }),
     {

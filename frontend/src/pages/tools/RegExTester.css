@@ -4,11 +4,11 @@
 }
 .regex-tester .ant-card {
   border-radius: var(--radius-lg) !important;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06) !important;
-  border: 1px solid var(--color-border-light) !important;
+  box-shadow: var(--shadow-sm) !important;
+  border: 1px solid var(--color-border) !important;
 }
 .regex-tester .ant-card-head {
-  border-bottom: 1px solid var(--color-border-light);
+  border-bottom: 1px solid var(--color-border);
   min-height: 52px;
 }
 .regex-highlight-pre {
@@ -22,14 +22,14 @@
   line-height: 1.8;
   max-height: 300px;
   overflow-y: auto;
-  border: 1px solid var(--color-border-light);
+  border: 1px solid var(--color-border);
 }
 .regex-match {
-  background: rgba(250, 173, 20, 0.25);
+  background: rgba(184, 132, 92, 0.25);
   color: inherit;
   padding: 1px 3px;
   border-radius: 3px;
-  border-bottom: 2px solid #faad14;
+  border-bottom: 2px solid var(--accent);
 }
 .regex-results-table table {
   width: 100%;
@@ -38,14 +38,13 @@
 }
 .regex-results-table th, .regex-results-table td {
   padding: 8px 12px;
-  border: 1px solid var(--color-border-light);
+  border: 1px solid var(--color-border);
   text-align: left;
 }
 .regex-results-table th {
   background: var(--color-bg-sunken);
   font-weight: 600;
   font-size: 12px;
-  text-transform: uppercase;
   letter-spacing: 0.03em;
 }
 .regex-results-table code {

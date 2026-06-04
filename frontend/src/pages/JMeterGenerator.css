@@ -1,4 +1,4 @@
-/* JMeter Generator - Modern styling */
+/* JMeter Generator - 温暖自然风格 */
 .jmeter-generator-container {
   padding: 0;
 }
@@ -7,12 +7,12 @@
   margin: 0;
   height: 100%;
   border-radius: var(--radius-lg) !important;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06) !important;
-  border: 1px solid var(--color-border-light) !important;
+  box-shadow: var(--shadow-sm) !important;
+  border: 1px solid var(--color-border) !important;
 }
 
 .jmeter-generator-container .ant-card-head {
-  border-bottom: 1px solid var(--color-border-light);
+  border-bottom: 1px solid var(--color-border);
   padding: 0 20px;
   min-height: 52px;
 }
@@ -20,6 +20,7 @@
 .jmeter-generator-container .ant-card-head-title {
   font-weight: 600;
   font-size: 15px;
+  font-family: var(--font-serif);
 }
 
 .jmeter-generator-container .ant-card-body {
@@ -32,7 +33,7 @@
 
 .preview-section {
   padding-left: 12px;
-  border-left: 1px solid var(--color-border-light);
+  border-left: 1px solid var(--color-border);
 }
 
 .loading-container {
@@ -49,25 +50,25 @@
   padding: 16px;
   background: var(--color-bg-sunken);
   border-radius: var(--radius-lg);
-  border: 1px solid var(--color-border-light);
+  border: 1px solid var(--color-border);
 }
 
 .jmx-preview {
   max-height: 400px;
   overflow: auto;
-  background: #0d1117;
+  background: #2a2a3e;
   border-radius: var(--radius-md);
   padding: 16px;
 }
 
 .jmx-preview pre {
   margin: 0;
-  color: #c9d1d9;
+  color: #d4d4d4;
   font-family: var(--font-mono);
   font-size: 12px;
   white-space: pre-wrap;
   word-wrap: break-word;
-  line-height: 1.6;
+  line-height: 1.8;
 }
 
 .empty-preview {
@@ -79,7 +80,7 @@
   background: var(--color-bg-sunken);
   border-radius: var(--radius-lg);
   text-align: center;
-  border: 1px solid var(--color-border-light);
+  border: 1px solid var(--color-border);
   color: var(--color-text-tertiary);
 }
 
@@ -88,7 +89,7 @@
   padding: 10px 12px;
   background: var(--color-bg-sunken);
   border-radius: var(--radius-md);
-  border: 1px solid var(--color-border-light);
+  border: 1px solid var(--color-border);
 }
 
 /* Tabs */
@@ -108,7 +109,6 @@
   background: var(--color-bg-sunken);
   font-weight: 600;
   font-size: 12px;
-  text-transform: uppercase;
   letter-spacing: 0.03em;
 }
 
@@ -145,7 +145,6 @@
   font-weight: 600;
   color: var(--color-text-secondary);
   font-size: 12px;
-  text-transform: uppercase;
   letter-spacing: 0.04em;
 }
 
@@ -160,7 +159,7 @@
   }
   .preview-section {
     border-left: none;
-    border-top: 1px solid var(--color-border-light);
+    border-top: 1px solid var(--color-border);
     padding-left: 0;
     padding-top: 16px;
     margin-top: 16px;
@@ -207,15 +206,15 @@
 }
 
 .jmx-preview::-webkit-scrollbar-track {
-  background: #161b22;
+  background: #222238;
   border-radius: 3px;
 }
 
 .jmx-preview::-webkit-scrollbar-thumb {
-  background: #30363d;
+  background: #3a3a4e;
   border-radius: 3px;
 }
 
 .jmx-preview::-webkit-scrollbar-thumb:hover {
-  background: #484f58;
+  background: #4a4a5e;
 }

@@ -1,5 +1,5 @@
 /* ============================================
-   Toolbox Dashboard - Clean grid layout
+   Toolbox Dashboard - 温暖网格布局
    ============================================ */
 
 .toolbox-dashboard-page {
@@ -16,7 +16,8 @@
 .toolbox-dashboard-header .ant-typography:first-child {
   font-size: 28px;
   font-weight: 700;
-  letter-spacing: -0.02em;
+  font-family: var(--font-serif);
+  letter-spacing: -0.01em;
   margin-bottom: 8px;
 }
 
@@ -40,9 +41,10 @@
   margin-bottom: 12px;
   font-size: 14px;
   font-weight: 600;
+  font-family: var(--font-serif);
   color: var(--color-text-primary);
   padding-bottom: 8px;
-  border-bottom: 1px solid var(--color-border-light);
+  border-bottom: 1px solid var(--color-border);
 }
 
 .toolbox-dashboard-cards {
@@ -51,12 +53,12 @@
   gap: 12px;
 }
 
-/* Tool cards */
+/* Tool cards - warm earthy */
 .toolbox-tool-card {
   border-radius: var(--radius-lg) !important;
   cursor: pointer;
   transition: all var(--transition-base) !important;
-  border: 1px solid var(--color-border-light) !important;
+  border: 1px solid var(--color-border) !important;
   background: var(--color-bg-elevated) !important;
   overflow: hidden;
   position: relative;
@@ -69,7 +71,7 @@
   left: 0;
   right: 0;
   height: 2px;
-  background: linear-gradient(90deg, transparent, #1677ff, transparent);
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
   opacity: 0;
   transition: opacity var(--transition-base);
 }
@@ -77,7 +79,7 @@
 .toolbox-tool-card:hover {
   transform: translateY(-2px) !important;
   box-shadow: var(--shadow-md) !important;
-  border-color: rgba(22, 119, 255, 0.2) !important;
+  border-color: rgba(184, 132, 92, 0.3) !important;
 }
 
 .toolbox-tool-card:hover::before {
@@ -121,17 +123,18 @@
    Dark Mode
    ============================================ */
 
-.dark-theme .toolbox-dashboard-card,
+body.night .toolbox-tool-card,
 .ant-app-dark .toolbox-tool-card {
-  background: #141414 !important;
+  background: #2a2a3e !important;
   border-color: rgba(255, 255, 255, 0.06) !important;
 }
 
-.dark-theme .toolbox-tool-card:hover,
+body.night .toolbox-tool-card:hover,
 .ant-app-dark .toolbox-tool-card:hover {
-  border-color: rgba(22, 119, 255, 0.2) !important;
+  border-color: rgba(212, 165, 116, 0.3) !important;
 }
 
+body.night .toolbox-dashboard-section-header,
 .ant-app-dark .toolbox-dashboard-section-header {
-  border-bottom-color: rgba(255, 255, 255, 0.04);
+  border-bottom-color: rgba(255, 255, 255, 0.06);
 }

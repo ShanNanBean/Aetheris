@@ -4,11 +4,11 @@
 }
 .hash-tool .ant-card {
   border-radius: var(--radius-lg) !important;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06) !important;
-  border: 1px solid var(--color-border-light) !important;
+  box-shadow: var(--shadow-sm) !important;
+  border: 1px solid var(--color-border) !important;
 }
 .hash-tool .ant-card-head {
-  border-bottom: 1px solid var(--color-border-light);
+  border-bottom: 1px solid var(--color-border);
   min-height: 52px;
 }
 .hash-results {
@@ -18,7 +18,7 @@
   padding: 12px;
   background: var(--color-bg-sunken);
   border-radius: var(--radius-md);
-  border: 1px solid var(--color-border-light);
+  border: 1px solid var(--color-border);
 }
 .hash-result-row {
   display: flex;
@@ -27,7 +27,7 @@
   padding: 6px 0;
 }
 .hash-result-row + .hash-result-row {
-  border-top: 1px solid var(--color-border-light);
+  border-top: 1px solid var(--color-border);
 }
 .hash-algo-label {
   width: 100px;
@@ -47,10 +47,12 @@
   padding: 2px 6px;
   border-radius: var(--radius-xs);
 }
+body.night .hash-results,
 .ant-app-dark .hash-results {
-  background: #141414;
-  border-color: #1f1f1f;
+  background: #222238;
+  border-color: #3a3a4e;
 }
+body.night .hash-value code,
 .ant-app-dark .hash-value code {
-  background: #1a1a1a;
+  background: #2a2a3e;
 }

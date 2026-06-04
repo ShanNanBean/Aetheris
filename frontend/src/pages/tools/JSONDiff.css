@@ -4,11 +4,11 @@
 }
 .json-diff .ant-card {
   border-radius: var(--radius-lg) !important;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06) !important;
-  border: 1px solid var(--color-border-light) !important;
+  box-shadow: var(--shadow-sm) !important;
+  border: 1px solid var(--color-border) !important;
 }
 .json-diff .ant-card-head {
-  border-bottom: 1px solid var(--color-border-light);
+  border-bottom: 1px solid var(--color-border);
   min-height: 52px;
 }
 .json-diff-inputs {
@@ -35,27 +35,27 @@
   padding: 8px 12px;
   border-radius: var(--radius-md);
   font-size: 13px;
-  border: 1px solid var(--color-border-light);
+  border: 1px solid var(--color-border);
 }
 .json-diff-added {
-  background: rgba(82, 196, 26, 0.06);
-  border-color: rgba(82, 196, 26, 0.15);
+  background: rgba(107, 142, 107, 0.1);
+  border-color: rgba(107, 142, 107, 0.2);
 }
 .json-diff-removed {
-  background: rgba(255, 77, 79, 0.06);
-  border-color: rgba(255, 77, 79, 0.15);
+  background: rgba(196, 112, 90, 0.1);
+  border-color: rgba(196, 112, 90, 0.2);
 }
 .json-diff-changed {
-  background: rgba(250, 173, 20, 0.06);
-  border-color: rgba(250, 173, 20, 0.15);
+  background: rgba(184, 132, 92, 0.1);
+  border-color: rgba(184, 132, 92, 0.2);
 }
 .diff-val-old {
-  color: #ff4d4f;
+  color: #C4705A;
   font-family: var(--font-mono);
   font-size: 12px;
 }
 .diff-val-new {
-  color: #52c41a;
+  color: #6B8E6B;
   font-family: var(--font-mono);
   font-size: 12px;
 }

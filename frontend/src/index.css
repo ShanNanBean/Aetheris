@@ -1,14 +1,16 @@
 /* ============================================
-   Aetheris - Design System Variables & Reset
+   Aetheris - 温暖自然设计系统
+   匹配主展示站点的河/溪流意象
    ============================================ */
 
-/* Import Inter font */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+/* Import Noto Serif SC + Noto Sans SC fonts */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&family=Noto+Serif+SC:wght@400;500;600;700&display=swap');
 
 :root {
   /* Typography */
-  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  --font-mono: 'JetBrains Mono', 'Fira Code', 'SF Mono', 'Cascadia Code', 'Consolas', 'Monaco', monospace;
+  --font-serif: 'Noto Serif SC', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-mono: 'Courier New', Consolas, 'SF Mono', Monaco, monospace;
 
   /* Spacing scale */
   --space-xs: 4px;
@@ -19,39 +21,52 @@
   --space-2xl: 32px;
   --space-3xl: 48px;
 
-  /* Border radius */
+  /* Border radius - organic, rounded */
   --radius-xs: 4px;
   --radius-sm: 6px;
-  --radius-md: 8px;
-  --radius-lg: 12px;
-  --radius-xl: 16px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
   --radius-full: 9999px;
 
-  /* Shadows */
+  /* === Design tokens matching main site === */
+
+  /* Colors - Light Mode */
+  --sky: #F5F0E8;
+  --bank: #E8DFD0;
+  --ink: #2a2a2a;
+  --ink-light: #5a5a5a;
+  --ink-muted: #9a9a9a;
+  --accent: #B8845C;
+  --green: #6B8E6B;
+  --stone: #D4C4B0;
+  --water: #C8D5B9;
+
+  /* Semantic color aliases */
+  --color-bg: var(--sky);
+  --color-bg-elevated: var(--bank);
+  --color-bg-sunken: #DDD5C8;
+  --color-border: var(--stone);
+  --color-border-light: #E0D8CC;
+  --color-text-primary: var(--ink);
+  --color-text-secondary: var(--ink-light);
+  --color-text-tertiary: var(--ink-muted);
+
+  /* Shadows - warm, subtle */
   --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.05);
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.04);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -2px rgba(0, 0, 0, 0.04);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.04);
-  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 8px 30px rgba(0, 0, 0, 0.12);
+  --shadow-xl: 0 12px 40px rgba(0, 0, 0, 0.15);
 
-  /* Colors */
-  --color-bg: #f7f8fa;
-  --color-bg-elevated: #ffffff;
-  --color-bg-sunken: #f0f2f5;
-  --color-border: #e5e7eb;
-  --color-border-light: #f0f0f0;
-  --color-text-primary: #111827;
-  --color-text-secondary: #6b7280;
-  --color-text-tertiary: #9ca3af;
+  /* Gradient presets - warm, earthy */
+  --gradient-primary: linear-gradient(135deg, #B8845C 0%, #9A7050 100%);
+  --gradient-accent: linear-gradient(135deg, #B8845C 0%, #D4A574 100%);
+  --gradient-surface: linear-gradient(180deg, rgba(245,240,232,0) 0%, rgba(232,223,208,0.5) 100%);
 
-  /* Gradient presets */
-  --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  --gradient-blue: linear-gradient(135deg, #1677ff 0%, #0958d9 100%);
-  --gradient-surface: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(247,248,250,0.5) 100%);
-
-  /* Transitions */
+  /* Transitions - gentle, natural */
   --transition-fast: 0.15s ease;
-  --transition-base: 0.2s ease;
+  --transition-base: 0.25s ease;
   --transition-slow: 0.3s ease;
 
   /* Header */
@@ -63,24 +78,35 @@
   --sider-collapsed-width: 64px;
 }
 
-/* Dark mode variables */
+/* Dark mode variables - body.night convention from main site */
+body.night,
 .dark-theme,
 [data-theme='dark'] {
-  --color-bg: #0a0a0a;
-  --color-bg-elevated: #141414;
-  --color-bg-sunken: #000000;
-  --color-border: #1f1f1f;
-  --color-border-light: #262626;
-  --color-text-primary: rgba(255, 255, 255, 0.88);
-  --color-text-secondary: rgba(255, 255, 255, 0.56);
-  --color-text-tertiary: rgba(255, 255, 255, 0.36);
+  --sky: #1a1a2e;
+  --bank: #2a2a3e;
+  --ink: #d4d4d4;
+  --ink-light: #a0a0a0;
+  --ink-muted: #707070;
+  --accent: #D4A574;
+  --green: #7BA07B;
+  --stone: #3a3a4e;
+  --water: #3a4a3a;
+
+  --color-bg: #1a1a2e;
+  --color-bg-elevated: #2a2a3e;
+  --color-bg-sunken: #222238;
+  --color-border: #3a3a4e;
+  --color-border-light: #33334a;
+  --color-text-primary: #d4d4d4;
+  --color-text-secondary: #a0a0a0;
+  --color-text-tertiary: #707070;
 
   --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.2);
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px 2px rgba(0, 0, 0, 0.2);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -2px rgba(0, 0, 0, 0.2);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -4px rgba(0, 0, 0, 0.2);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 8px 30px rgba(0, 0, 0, 0.35);
 
-  --gradient-surface: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(10,10,10,0.5) 100%);
+  --gradient-surface: linear-gradient(180deg, rgba(26,26,46,0) 0%, rgba(26,26,46,0.5) 100%);
 }
 
 /* Reset */
@@ -100,7 +126,7 @@ html, body, #root {
 body {
   font-family: var(--font-sans);
   font-size: 14px;
-  line-height: 1.6;
+  line-height: 1.8;
   color: var(--color-text-primary);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -110,7 +136,7 @@ body {
 /* Global smooth transitions */
 * {
   transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
-  transition-duration: var(--transition-fast);
+  transition-duration: var(--transition-base);
   transition-timing-function: ease;
 }
 
@@ -123,7 +149,7 @@ body {
   transition: none !important;
 }
 
-/* Scrollbar styling */
+/* Scrollbar styling - warm */
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
@@ -142,24 +168,26 @@ body {
   background: rgba(0, 0, 0, 0.2);
 }
 
+body.night ::-webkit-scrollbar-thumb,
 .dark-theme ::-webkit-scrollbar-thumb,
 [data-theme='dark'] ::-webkit-scrollbar-thumb {
   background: rgba(255, 255, 255, 0.12);
 }
 
+body.night ::-webkit-scrollbar-thumb:hover,
 .dark-theme ::-webkit-scrollbar-thumb:hover,
 [data-theme='dark'] ::-webkit-scrollbar-thumb:hover {
   background: rgba(255, 255, 255, 0.2);
 }
 
-/* Selection color */
+/* Selection color - warm copper */
 ::selection {
-  background: rgba(22, 119, 255, 0.15);
+  background: rgba(184, 132, 92, 0.2);
   color: inherit;
 }
 
-/* Focus styles */
+/* Focus styles - warm accent */
 :focus-visible {
-  outline: 2px solid rgba(22, 119, 255, 0.4);
+  outline: 2px solid rgba(184, 132, 92, 0.4);
   outline-offset: 2px;
 }

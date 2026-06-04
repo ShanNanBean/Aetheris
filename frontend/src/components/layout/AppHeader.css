@@ -1,5 +1,5 @@
 /* ============================================
-   Header - Modern glass-morphism design
+   Header - 温暖半透明玻璃效果
    ============================================ */
 
 .app-header {
@@ -7,30 +7,19 @@
   justify-content: space-between;
   align-items: center;
   padding: 0 20px !important;
-  background: linear-gradient(135deg, #0c1829 0%, #0a1628 50%, #0d1f3c 100%) !important;
+  background: rgba(250, 248, 245, 0.92) !important;
   height: var(--header-height) !important;
   position: relative;
   z-index: 100;
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.04), 0 2px 8px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
   backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid #E8E0D8;
 }
 
-/* Subtle top accent line */
+/* 移除顶部蓝色渐变线 */
 .app-header::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background: linear-gradient(90deg,
-    transparent 0%,
-    rgba(22, 119, 255, 0.4) 20%,
-    rgba(114, 46, 209, 0.4) 50%,
-    rgba(19, 194, 194, 0.4) 80%,
-    transparent 100%
-  );
+  display: none;
 }
 
 .header-left {
@@ -44,57 +33,56 @@
   align-items: center;
   gap: 10px;
   padding-right: 12px;
-  border-right: 1px solid rgba(255, 255, 255, 0.06);
+  border-right: 1px solid #E0D8CC;
   margin-right: 4px;
 }
 
 .logo-icon {
   font-size: 24px;
-  color: #4096ff;
-  filter: drop-shadow(0 0 8px rgba(64, 150, 255, 0.35));
+  color: var(--accent);
+  filter: drop-shadow(0 0 6px rgba(184, 132, 92, 0.3));
   transition: filter var(--transition-base), transform var(--transition-base);
 }
 
 .logo-section:hover .logo-icon {
-  filter: drop-shadow(0 0 12px rgba(64, 150, 255, 0.5));
+  filter: drop-shadow(0 0 10px rgba(184, 132, 92, 0.45));
   transform: scale(1.05);
 }
 
 .app-title {
   margin: 0 !important;
-  color: rgba(255, 255, 255, 0.95) !important;
+  color: var(--ink) !important;
   font-weight: 700 !important;
   font-size: 17px !important;
   letter-spacing: -0.02em;
-  background: linear-gradient(135deg, #fff 30%, rgba(255, 255, 255, 0.7));
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  font-family: var(--font-serif) !important;
+  background: none !important;
+  -webkit-text-fill-color: var(--ink) !important;
 }
 
 .header-trigger {
   font-size: 16px;
-  color: rgba(255, 255, 255, 0.55);
+  color: var(--ink-muted);
   cursor: pointer;
   padding: 6px 8px;
-  border-radius: var(--radius-sm);
-  transition: all var(--transition-fast);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-base);
 }
 
 .header-trigger:hover {
-  color: rgba(255, 255, 255, 0.95);
-  background: rgba(255, 255, 255, 0.06);
+  color: var(--ink);
+  background: rgba(184, 132, 92, 0.08);
 }
 
 .header-right {
   display: flex;
   align-items: center;
   gap: 12px;
-  color: rgba(255, 255, 255, 0.85);
+  color: var(--ink-light);
 }
 
 .header-text {
-  color: rgba(255, 255, 255, 0.4) !important;
+  color: var(--ink-muted) !important;
   font-size: 13px;
   letter-spacing: 0.02em;
 }
@@ -105,34 +93,34 @@
 }
 
 .header-action-btn {
-  color: rgba(255, 255, 255, 0.55) !important;
+  color: var(--ink-muted) !important;
   font-size: 16px;
   width: 34px;
   height: 34px;
-  border-radius: var(--radius-sm) !important;
+  border-radius: var(--radius-md) !important;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all var(--transition-fast) !important;
+  transition: all var(--transition-base) !important;
 }
 
 .header-action-btn:hover {
-  color: #fff !important;
-  background: rgba(255, 255, 255, 0.08) !important;
+  color: var(--ink) !important;
+  background: rgba(184, 132, 92, 0.08) !important;
 }
 
-/* Theme switch - elegant toggle */
+/* Theme switch - warm toggle */
 .theme-switch {
-  background: rgba(255, 255, 255, 0.12) !important;
-  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  background: rgba(184, 132, 92, 0.15) !important;
+  border: 1px solid rgba(184, 132, 92, 0.2) !important;
   min-width: 44px !important;
   height: 24px !important;
 }
 
 .theme-switch.ant-switch-checked {
-  background: linear-gradient(135deg, #1677ff, #0958d9) !important;
+  background: linear-gradient(135deg, #B8845C, #D4A574) !important;
   border-color: transparent !important;
-  box-shadow: 0 0 12px rgba(22, 119, 255, 0.3);
+  box-shadow: 0 0 12px rgba(184, 132, 92, 0.3);
 }
 
 .theme-switch .ant-switch-handle {
@@ -145,9 +133,59 @@
   left: calc(100% - 20px) !important;
 }
 
-/* Dark mode header adjustments */
+/* Dark mode header */
+body.night .app-header,
 .ant-app-dark .app-header {
-  background: linear-gradient(135deg, #0a0a0a 0%, #111 50%, #0d0d0d 100%) !important;
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.03), 0 2px 8px rgba(0, 0, 0, 0.3);
-  border-bottom-color: rgba(255, 255, 255, 0.04);
+  background: rgba(26, 26, 46, 0.92) !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  border-bottom-color: rgba(255, 255, 255, 0.06);
+}
+
+body.night .app-title,
+.ant-app-dark .app-title {
+  color: #d4d4d4 !important;
+  -webkit-text-fill-color: #d4d4d4 !important;
+}
+
+body.night .logo-section,
+.ant-app-dark .logo-section {
+  border-right-color: rgba(255, 255, 255, 0.08);
+}
+
+body.night .logo-icon,
+.ant-app-dark .logo-icon {
+  color: #D4A574;
+  filter: drop-shadow(0 0 6px rgba(212, 165, 116, 0.3));
+}
+
+body.night .header-trigger,
+.ant-app-dark .header-trigger {
+  color: rgba(212, 212, 212, 0.55);
+}
+
+body.night .header-trigger:hover,
+.ant-app-dark .header-trigger:hover {
+  color: #d4d4d4;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+body.night .header-right,
+.ant-app-dark .header-right {
+  color: rgba(212, 212, 212, 0.85);
+}
+
+body.night .header-text,
+.ant-app-dark .header-text {
+  color: rgba(212, 212, 212, 0.4) !important;
+}
+
+body.night .header-action-btn,
+.ant-app-dark .header-action-btn {
+  color: rgba(212, 212, 212, 0.55) !important;
+}
+
+body.night .header-action-btn:hover,
+.ant-app-dark .header-action-btn:hover {
+  color: #d4d4d4 !important;
+  background: rgba(255, 255, 255, 0.06) !important;
 }

@@ -1,5 +1,5 @@
 /* ============================================
-   Main Layout - Clean content area
+   Main Layout - 温暖内容区域
    ============================================ */
 
 .main-layout {
@@ -40,6 +40,7 @@
 }
 
 /* Dark mode content area */
+body.night .main-content,
 .ant-app-dark .main-content {
-  background: #000;
+  background: #1a1a2e;
 }

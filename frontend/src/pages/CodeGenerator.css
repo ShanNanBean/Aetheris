@@ -1,4 +1,4 @@
-/* Code Generator - Modern styling */
+/* Code Generator - 温暖自然风格 */
 .code-generator-container {
   padding: 0;
   min-height: 100%;
@@ -6,12 +6,12 @@
 
 .code-generator-container .ant-card {
   border-radius: var(--radius-lg) !important;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06) !important;
-  border: 1px solid var(--color-border-light) !important;
+  box-shadow: var(--shadow-sm) !important;
+  border: 1px solid var(--color-border) !important;
 }
 
 .code-generator-container .ant-card-head {
-  border-bottom: 1px solid var(--color-border-light);
+  border-bottom: 1px solid var(--color-border);
   padding: 0 20px;
   min-height: 52px;
 }
@@ -19,6 +19,7 @@
 .code-generator-container .ant-card-head-title {
   font-weight: 600;
   font-size: 15px;
+  font-family: var(--font-serif);
 }
 
 .config-section {
@@ -27,7 +28,7 @@
 
 .preview-section {
   padding-left: 16px;
-  border-left: 1px solid var(--color-border-light);
+  border-left: 1px solid var(--color-border);
   min-height: 600px;
 }
 
@@ -53,7 +54,7 @@
   background: var(--color-bg-sunken);
   border-radius: var(--radius-md);
   text-align: center;
-  border: 1px solid var(--color-border-light);
+  border: 1px solid var(--color-border);
 }
 
 .preview-container {
@@ -66,7 +67,7 @@
   background: var(--color-bg-sunken);
   border-radius: var(--radius-lg);
   text-align: left;
-  border: 1px solid var(--color-border-light);
+  border: 1px solid var(--color-border);
 }
 
 .loading-container {
@@ -95,10 +96,10 @@
   margin-top: 16px;
 }
 
-/* Collapse styles */
+/* Collapse styles - copper accent */
 .code-generator-container .ant-collapse-ghost > .ant-collapse-item > .ant-collapse-header {
   padding: 8px 0;
-  color: #1677ff;
+  color: var(--accent);
   font-weight: 500;
 }
 
@@ -115,11 +116,11 @@
   border: 1px solid var(--color-border);
   border-radius: var(--radius-sm);
   cursor: pointer;
-  transition: border-color var(--transition-fast);
+  transition: border-color var(--transition-base);
 }
 
 .code-generator-container input[type="color"]:hover {
-  border-color: #4096ff;
+  border-color: var(--accent);
 }
 
 /* Responsive */
@@ -130,7 +131,7 @@
   }
   .preview-section {
     border-left: none;
-    border-top: 1px solid var(--color-border-light);
+    border-top: 1px solid var(--color-border);
     padding-left: 0;
     padding-top: 16px;
     margin-top: 16px;

@@ -1,12 +1,12 @@
 /* ============================================
-   Footer - Minimal and clean
+   Footer - 温暖简约
    ============================================ */
 
 .app-footer {
   text-align: center;
   padding: 0 24px !important;
   background: var(--color-bg-elevated) !important;
-  border-top: 1px solid var(--color-border-light) !important;
+  border-top: 1px solid var(--color-border) !important;
   height: 40px !important;
   min-height: 40px;
   display: flex;
@@ -21,7 +21,8 @@
 }
 
 /* Dark mode footer */
+body.night .app-footer,
 .ant-app-dark .app-footer {
-  background: #0a0a0a !important;
-  border-top-color: rgba(255, 255, 255, 0.04) !important;
+  background: #222238 !important;
+  border-top-color: rgba(255, 255, 255, 0.06) !important;
 }
